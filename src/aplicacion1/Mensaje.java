@@ -28,7 +28,7 @@ public class Mensaje extends Validacion{
         if(soloLetras(palabra))
             System.out.println("La frase cuenta solo con letras");
         else
-            System.out.println("La frase es cuenta con número además de letras");
+            System.out.println("La frase cuenta con número además de letras");
     } 
     
     /*
