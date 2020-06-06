@@ -1,4 +1,4 @@
-package aplicacion1;
+package actividad_2;
 
 public class Mensaje extends Validacion{
     
@@ -6,8 +6,8 @@ public class Mensaje extends Validacion{
     private String palabra;
     
     //Constructor
-    public Mensaje(String _palabra){
-        palabra = _palabra;
+    public Mensaje(String palabra){
+        this.palabra = palabra;
     }
     
     //Metodo Para Eliminar Espacios
@@ -28,7 +28,7 @@ public class Mensaje extends Validacion{
         if(soloLetras(palabra))
             System.out.println("La frase cuenta solo con letras");
         else
-            System.out.println("La frase cuenta con número además de letras");
+            System.out.println("La frase cuenta con números además de letras");
     } 
     
     /*

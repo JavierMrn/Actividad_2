@@ -1,4 +1,4 @@
-package aplicacion1;
+package actividad_2;
 
 public class Validacion{
     
@@ -9,13 +9,12 @@ public class Validacion{
         for (int i = frase.length() - 1; i >= 0; i--) {
             if(frase.charAt(i) == frase.charAt(frase.length() - (i+1))){
                 val = true;
-                
-            }else {
+            }
+            else {
                 val = false;
                 break;
-            }
+            }    
         }
-        
         return val;
     }
     
