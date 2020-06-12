@@ -4,16 +4,11 @@ public class Validacion{
     
     //Metodos
     public boolean isPolindromo(String frase){
-        boolean val = false;
+        boolean val = true;
                 
         for (int i = frase.length() - 1; i >= 0; i--) {
-            if(frase.charAt(i) == frase.charAt(frase.length() - (i+1))){
-                val = true;
-            }
-            else {
-                val = false;
-                break;
-            }    
+            val = frase.charAt(i) == frase.charAt(frase.length() - (i+1));
+            if(!val) break; //Detener el bucle una vez que encuentra un caracter que no concuerda con el otro.
         }
         return val;
     }
@@ -30,8 +25,8 @@ public class Validacion{
                     val = false;
                     break;
             }
+            if(!val) break; //Detener el bucle una vez que a encontrado un número
         }
-        
         return val;
     }
 }
