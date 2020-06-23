@@ -3,7 +3,7 @@ package actividad_2;
 public class Validacion{
     
     //Metodos
-    public boolean isPolindromo(String frase){
+    public boolean isPalindromo(String frase){
         boolean val = true;
                 
         for (int i = frase.length() - 1; i >= 0; i--) {

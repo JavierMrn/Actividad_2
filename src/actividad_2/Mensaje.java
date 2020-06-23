@@ -18,27 +18,10 @@ public class Mensaje extends Validacion {
     public void darFormato(){
         frase = frase.replace(".", ""); //Metodo interno que hay en las clases tipo String para remplazar todo un caracter por otro.
         frase = frase.replaceAll("\\s+", ""); //Metodo interno que hay en las clases tipo String, hace lo mismo que arriba.
-        frase = frase.toLowerCase(); //Metodo interno que hay en las clases tipo String para transformar todo a minusculas.
-    }
-    
-    //Metodo que imprime el resultado
-    public void ImprimirResultados(){
-        System.out.println("La frase ingresada y corregida es: " + frase);
-        
-        //Llamada a la clase validacion para las verificaciones
-        if(isPolindromo(frase))
-            System.out.println("La frase es Polindroma");
-        else
-            System.out.println("La frase no es Polindroma");
-        
-        if(soloLetras(frase))
-            System.out.println("La frase cuenta solo con letras");
-        else
-            System.out.println("La frase cuenta con números además de letras");
+        frase = frase.toLowerCase(); //Metodo interno que hay en las clases tipo String para transformar un string a minusculas.
     } 
     
     //Metodos Geters and Seters
-    
     public String getFrase() {
         return frase;
     }
@@ -47,10 +30,9 @@ public class Mensaje extends Validacion {
         this.frase = frase;
     }
     
-    //Excepciones
     
-    //Metodos Opcionales para hacer las conversiones.(Por suerte java cuenta con metodos que hacen todo esto automaticamente jeje)
     
+    //Metodos internos y opcionales para hacer las conversiones.
     /*
     //Metodo que elimina los puntos, espacios en blanco y saltos de linea
     private String eliminarEspacios(){
@@ -61,13 +43,12 @@ public class Mensaje extends Validacion {
                 newString += frase.charAt(i);
             }
         }
-        
         return newString;
     }
     */
     
     /*
-    //Metodo para transformar todo a minusculas.(Rayos si que salio largo)
+    //Metodo para transformar todo a minusculas.
     private String transformarAMinusculas(){
         String newString = "";
         
@@ -100,8 +81,7 @@ public class Mensaje extends Validacion {
                 case 'Z': newString += 'z'; break;
                 default: newString += frase.charAt(i); break;
             }
-        }
-        
+        }    
         return newString;
     }
     */
