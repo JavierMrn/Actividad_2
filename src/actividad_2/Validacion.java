@@ -4,13 +4,12 @@ public class Validacion{
     
     //Metodos
     public boolean isPalindromo(String frase){
-        boolean val = true;
-                
+        String newString = "";
+        
         for (int i = frase.length() - 1; i >= 0; i--) {
-            val = frase.charAt(i) == frase.charAt(frase.length() - (i+1));
-            if(!val) break; //Detener el bucle una vez que encuentra un caracter que no concuerda con el otro.
+            newString += frase.charAt(i);
         }
-        return val;
+        return frase.equalsIgnoreCase(newString);
     }
     
     public boolean soloLetras(String frase){

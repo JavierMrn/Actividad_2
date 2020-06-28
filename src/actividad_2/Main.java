@@ -8,7 +8,11 @@ public class Main {
         String frase;
         frase = JOptionPane.showInputDialog("Ingrese Una Frase");
        
-        if(frase == null) Runtime.getRuntime().exit(0); //Evita errores en caso de que el usuario cierre la ventana de dialogo 
+        if(frase == null) Runtime.getRuntime().exit(0); //Evita errores en caso de que el usuario cierre la ventana de dialogo o no ingrese la frase
+        else if(frase.equals("")) {
+            System.out.println("Ingrese una frase por favor :)");
+            Runtime.getRuntime().exit(0);
+        }
         
         //Objeto Mensaje
         Mensaje mensaje = new Mensaje();
@@ -18,17 +22,15 @@ public class Main {
         //Objeto Validacion
         Validacion validacion = new Validacion();
         
-        //Imprimir el resultados
-        System.out.println("La frase ingresada y corregida es: " + mensaje.getFrase());
+        /////Imprimir los resultados/////
+        System.out.println("La frase ingresada fue: " + mensaje.getAntFrase());
+        System.out.println("La frase con el nuevo formato es: " + mensaje.getFrase());
         
-        if(validacion.isPalindromo(mensaje.getFrase()))
-            System.out.println("La frase es Polindroma");
-        else
-            System.out.println("La frase no es Polindroma");
+        //LLamada al método que busca si la frase es pilindroma 
+        System.out.println("La frase es Polindroma: " + validacion.isPalindromo(mensaje.getFrase()));
         
-        if(validacion.soloLetras(mensaje.getFrase()))
-            System.out.println("La frase cuenta solo con letras");
-        else
-            System.out.println("La frase cuenta con números además de letras");
+        //LLamada al método que busca si la frase tiene números 
+        System.out.println("La frase cuenta solo con letras: " + validacion.soloLetras(mensaje.getFrase()));
+        
     }
 }
