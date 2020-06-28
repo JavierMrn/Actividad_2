@@ -37,7 +37,7 @@ public class Mensaje extends Validacion {
         return antFrase;
     }
     
-    //Metodos internos y opcionales para hacer las conversiones.
+    //////***Metodos internos y opcionales para hacer las conversiones***//////
     /*
     //Metodo que elimina los puntos, espacios en blanco y saltos de linea
     private String eliminarEspacios(){

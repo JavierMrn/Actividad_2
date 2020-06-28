@@ -8,9 +8,10 @@ public class Main {
         String frase;
         frase = JOptionPane.showInputDialog("Ingrese Una Frase");
        
-        if(frase == null) Runtime.getRuntime().exit(0); //Evita errores en caso de que el usuario cierre la ventana de dialogo o no ingrese la frase
-        else if(frase.equals("")) {
-            System.out.println("Ingrese una frase por favor :)");
+        
+        //Evita errores en caso de que el usuario cierre la ventana de dialogo o no ingrese una frase
+        if(frase == null || frase.equals("")){ 
+            JOptionPane.showMessageDialog(null, "Ingrese una frase para proxima por favor :)");
             Runtime.getRuntime().exit(0);
         }
         
