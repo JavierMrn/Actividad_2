@@ -1,10 +1,8 @@
 package actividad_2;
 
 public class Mensaje extends Validacion {
-    
     //Atributos
     private String frase;
-    private String antFrase;
     
     //Constructores
     public Mensaje(){
@@ -13,14 +11,13 @@ public class Mensaje extends Validacion {
     
     public Mensaje(String palabra){
         this.frase = palabra;
-        this.antFrase = palabra;
     }
     
     //Metodo Para Eliminar Espacios
     public void darFormato(){
-        frase = frase.replace(".", ""); //Metodo interno que hay en las clases tipo String para remplazar todo un caracter por otro.
-        frase = frase.replace(" ", ""); //Metodo interno que hay en las clases tipo String, hace lo mismo que arriba.
-        frase = frase.toLowerCase(); //Metodo interno que hay en las clases tipo String para transformar un string a minusculas.
+        frase = frase.replace(".", ""); //Metodo interno que remplaza todo un caracter por otro.
+        frase = frase.replace(" ", "");
+        frase = frase.toLowerCase(); //Metodo interno para transformar un string a minusculas.
     } 
     
     //Metodos Geters and Seters
@@ -30,12 +27,9 @@ public class Mensaje extends Validacion {
 
     public void setFrase(String frase) {
         this.frase = frase;
-        this.antFrase = frase;
     }
     
-    public String getAntFrase(){
-        return antFrase;
-    }
+    
     
     //////***Metodos internos y opcionales para hacer las conversiones***//////
     /*

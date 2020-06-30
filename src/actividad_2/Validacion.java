@@ -1,31 +1,43 @@
 package actividad_2;
 
 public class Validacion{
-    
+
     //Metodos
-    public boolean isPalindromo(String frase){
+    public boolean isPalindromo(Mensaje frase){
         String newString = "";
+        String pricipalFrase = frase.getFrase();
         
-        for (int i = frase.length() - 1; i >= 0; i--) {
-            newString += frase.charAt(i);
+        for (int i = pricipalFrase.length() - 1; i >= 0; i--) {
+            newString += pricipalFrase.charAt(i);
         }
-        return frase.equalsIgnoreCase(newString);
+        return pricipalFrase.equals(newString);
     }
     
-    public boolean soloLetras(String frase){
-       boolean val = true;
-                
-        for (int i = 0; i < frase.length(); i++) {
-            switch(frase.charAt(i)){
+    public boolean soloLetras(Mensaje frase){
+       char[] pricipalFrase = new char[frase.getFrase().length()];
+       pricipalFrase = frase.getFrase().toCharArray();
+       
+       for(char c: pricipalFrase){
+           if(Character.isDigit(c)){
+               return false;
+           }
+       }
+       return true;
+    }
+    
+    /*
+    public boolean soloLetras(Mensaje frase){
+       String pricipalFrase = frase.getFrase();
+       
+        for (int i = 0; i < pricipalFrase.length(); i++) {
+            switch(pricipalFrase.charAt(i)){
                 case '1': case '2': case '3':
                 case '4': case '5': case '6':
                 case '7': case '8': case '9':
                 case '0': 
-                    val = false;
-                    break;
+                    return false;
             }
-            if(!val) break; //Detener el bucle una vez que a encontrado un número
         }
-        return val;
-    }
+        return true;
+    }*/
 }
