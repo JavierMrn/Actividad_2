@@ -1,4 +1,4 @@
-package actividad_2;
+package FrasesPalindromas;
 
 public class Validacion{
 
