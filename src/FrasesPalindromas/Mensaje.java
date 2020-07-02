@@ -1,6 +1,6 @@
 package FrasesPalindromas;
 
-public class Mensaje extends Validacion {
+public class Mensaje{
     //Atributos
     private String frase;
     

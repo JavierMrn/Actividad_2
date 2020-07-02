@@ -45,13 +45,16 @@ public class ValidacionTest {
     @Test
     public void testIsPalindromo() {
         System.out.println("Metodo isPalindromo");
-        Mensaje frase = new Mensaje("Ana");
+        Mensaje frase = new Mensaje("1 A.n.a 1");
+        frase.darFormato();
         Validacion instance = new Validacion();
         boolean expResult = true;
         boolean result = instance.isPalindromo(frase);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if(expResult != result){
+            fail("The test case is a prototype.");
+        }
     }
 
     /**
@@ -66,7 +69,8 @@ public class ValidacionTest {
         boolean result = instance.soloLetras(frase);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if(expResult != result){
+            fail("The test case is a prototype.");
+        }
     }
-    
 }

@@ -50,6 +50,8 @@ public class MensajeTest {
         String result = instance.getFrase();
         assertArrayEquals(expResult.toCharArray(), result.toCharArray());
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if(!expResult.equals(result)){
+            fail("The test case is a prototype.");
+        }
     }
 }
